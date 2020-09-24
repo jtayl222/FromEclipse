@@ -8,12 +8,12 @@
     <bpmn2:endEvent id="EndEvent_1" name="End Event 1">
       <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
     </bpmn2:endEvent>
-    <bpmn2:scriptTask id="ScriptTask_1" name="Script Task 1">
+    <bpmn2:userTask id="UserTask_1" name="User Task 1">
       <bpmn2:incoming>SequenceFlow_2</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
-    </bpmn2:scriptTask>
-    <bpmn2:sequenceFlow id="SequenceFlow_2" sourceRef="StartEvent_1" targetRef="ScriptTask_1"/>
-    <bpmn2:sequenceFlow id="SequenceFlow_3" sourceRef="ScriptTask_1" targetRef="EndEvent_1"/>
+    </bpmn2:userTask>
+    <bpmn2:sequenceFlow id="SequenceFlow_2" sourceRef="StartEvent_1" targetRef="UserTask_1"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_3" sourceRef="UserTask_1" targetRef="EndEvent_1"/>
   </bpmn2:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Process Diagram">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="process_1">
@@ -29,21 +29,21 @@
           <dc:Bounds height="14.0" width="66.0" x="485.0" y="136.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_ScriptTask_1" bpmnElement="ScriptTask_1" isExpanded="true">
-        <dc:Bounds height="50.0" width="110.0" x="265.0" y="93.0"/>
+      <bpmndi:BPMNShape id="BPMNShape_UserTask_1" bpmnElement="UserTask_1" isExpanded="true">
+        <dc:Bounds height="50.0" width="110.0" x="291.0" y="93.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_3" labelStyle="BPMNLabelStyle_1">
-          <dc:Bounds height="14.0" width="69.0" x="285.0" y="111.0"/>
+          <dc:Bounds height="14.0" width="64.0" x="314.0" y="111.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_2" bpmnElement="SequenceFlow_2" sourceElement="BPMNShape_1" targetElement="BPMNShape_ScriptTask_1">
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_2" bpmnElement="SequenceFlow_2" sourceElement="BPMNShape_1" targetElement="BPMNShape_UserTask_1">
         <di:waypoint xsi:type="dc:Point" x="136.0" y="118.0"/>
-        <di:waypoint xsi:type="dc:Point" x="200.0" y="118.0"/>
-        <di:waypoint xsi:type="dc:Point" x="265.0" y="118.0"/>
+        <di:waypoint xsi:type="dc:Point" x="213.0" y="118.0"/>
+        <di:waypoint xsi:type="dc:Point" x="291.0" y="118.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_4"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_3" bpmnElement="SequenceFlow_3" sourceElement="BPMNShape_ScriptTask_1" targetElement="BPMNShape_2">
-        <di:waypoint xsi:type="dc:Point" x="375.0" y="118.0"/>
-        <di:waypoint xsi:type="dc:Point" x="437.0" y="118.0"/>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_3" bpmnElement="SequenceFlow_3" sourceElement="BPMNShape_UserTask_1" targetElement="BPMNShape_2">
+        <di:waypoint xsi:type="dc:Point" x="401.0" y="118.0"/>
+        <di:waypoint xsi:type="dc:Point" x="450.0" y="118.0"/>
         <di:waypoint xsi:type="dc:Point" x="500.0" y="118.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_5"/>
       </bpmndi:BPMNEdge>
